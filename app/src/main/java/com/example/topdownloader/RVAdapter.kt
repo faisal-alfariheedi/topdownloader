@@ -27,7 +27,7 @@ class RVAdapter(private val rv: ArrayList<Entry>, val cont: Context): RecyclerVi
         holder.itemView.apply {
             var rvlisting= findViewById<CardView>(R.id.rvlisting)
             var ct= findViewById<TextView>(R.id.cardtitle)
-            findViewById<TextView>(R.id.date).text= "updated: ${(rv[position].updated)!!.removeRange(10,25)}"
+            findViewById<TextView>(R.id.date).text= "released: ${(rv[position].updated)!!.removeRange(10,25)}"
 
             ct.text = rvv.toString()
 
