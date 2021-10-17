@@ -2,6 +2,7 @@ package com.example.topdownloader
 
 import org.simpleframework.xml.Attribute
 import org.simpleframework.xml.Element
+import org.simpleframework.xml.Namespace
 import org.simpleframework.xml.Root
 import java.io.Serializable
 
@@ -9,12 +10,14 @@ import java.io.Serializable
 class Entry @JvmOverloads constructor(
 
 
-    @field:Element(name = "im:name")
-    @param:Element(name = "im:name")
-    var title: String? = null,
+    @field:Element(name = "name")
+    @param:Element(name = "name")
+    @Namespace(prefix="im")
+    var name: String? = null,
 
-    @field:Element(name = "updated")
-    @param:Element(name = "updated")
+    @field:Element(name = "releaseDate")
+    @param:Element(name = "releaseDate")
+    @Namespace(prefix="im")
     var updated: String? = null
 
 ) : Serializable {
